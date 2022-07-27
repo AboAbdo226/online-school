@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> انشاء حساب</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../css1/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS1/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css1/style1.css" />
+   
+</head>
+<style>
+  .card-link i{
+  border: 2px solid #7B7B7B;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 32px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 35px;
+    transform: rotate(90deg);
+    right: 70px;
+    bottom: 4px;
+}
+
+</style>
+<body >
+    <div class="container">
+        <div class="trans">
+           <a href="/">
+              الصفحة الرئيسية>
+            </a> 
+            <a href="">
+                 انشاء الحساب
+            </a> 
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+          <div>
+            <h1 style="text-align:center"> <a href="/login">تسجيل لدخول </a></h1>
+          </div>
+          <div class="row">
+                <div class="col-md-4 col-12" >
+                    <div class="card" style="width: 18rem;">
+                      <img src="./images/student.png" class="card-img-top stu" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">الطلاب</h5>
+                        <p class="card-text">ابدأ التعلم</p>
+                        <a href="/signUpStudent" class="card-link">
+                            <i class="fa fa-chevron-down fa-lg"></i>
+                         </a>
+                      </div>
+                    </div>
+                </div>
+               
+               
+               <div class="col-md-4 col-12">
+                <div  style="width: 18rem;"> </div></div>
+                
+                
+                <div class="col-md-4 col-12">
+                  <div class="card" style="width: 18rem;">
+                    <img src="./images/teacher.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">المعلمون</h5>
+                      <p class="card-text">تابع طلابك بتقديم الدروس </p>
+                      <a href="/signUpTeacher" class="card-link">
+                        <i class="fa fa-chevron-down fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+
+                  
+          </div>
+        </div>
+      </section>
+          <script>
+            var state = false;
+        function toggle(){
+            if (state){
+                document.getElementById('pass').setAttribute('type', 'password');
+                document.getElementById('eye').style.color= "black";
+                state = false;
+            }else {
+                document.getElementById('pass').setAttribute('type', 'text');
+                document.getElementById('eye').style.color= "blue";
+                state = true;
+            }
+        }
+    </script>
+<script>
+    var state = false;
+function toggle2(){
+    if (state){
+        document.getElementById('cpass').setAttribute('type', 'password');
+        document.getElementById('eye2').style.color= "black";
+        state = false;
+    }else {
+        document.getElementById('cpass').setAttribute('type', 'text');
+        document.getElementById('eye2').style.color= "blue";
+        state = true;
+    }
+}
+</script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#form').submit(function() {
+                if ($('#pass').val() != $('#cpass').val()) {
+                    $('#cpass').css('border-color', '#f9590f');
+                    return false;
+                }
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
+
+

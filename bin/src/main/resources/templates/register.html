@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>shiiil 3mii shiiiil</title>
+
+ 
+</head>
+
+<body>
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Site<span>Random</span></div>
+		</div>
+		<br>
+		<div class="login">
+		<form  th:action="@{/verification}" th:object="${user}" method=POST >
+				<input type="text" placeholder="First name" th:field="*{experienceDate}" name="user"><br>
+				<input type="text"  placeholder="Last name" name="user"><br>
+				<input type="email"  placeholder="Email" name="user" id="password"><br>
+				<input type="password" placeholder="password" name="password" ><br>
+				 <input type="submit" name="next" class="btn btn-primary" value="Login" />
+				</form>
+		</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+</body>
+
+</html>
